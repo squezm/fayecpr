@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <title>Faye's BLS/ACLS CPR Course</title>
+  <link rel="stylesheet" href="{% static 'website/untitled-font-1/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'website/font-awesome-4.7.0/css/font-awesome.css' %}">
+</head>
+<body>
+<div class="header">
+  <br />
+  BLS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  ACLS&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  Infant CPR&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  Certification&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  Gallery
+</div>
+<div class="container">
+  <h1>Faye's CPR classes</h1>
+
+  <ul class="navstrip">
+    <li class="fa fa-navicon"></li><br />
+    <li class="fa fa-facebook-official"></li><br />
+    <li class="icon-heart-o"></li><br />
+    <div class="like">Like Faye's class!</div>
+  </ul>
+
+  <div class="content">
+    <div class="col1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col2">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+@font-face{
+  src: url('./static/website/untitled-font-1/fonts/untitled-font-1.ttf');
+  font-family: "heart-font";
+}
+@font-face{
+  font-family: "fontawesome";
+  src: url('./static/website/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf');
+}
+@font-face{
+  font-family: "HK";
+  src: url('./static/website/HKGrotesk/TTF/HKGrotesk-Regular.ttf');
+}
+.header {
+  position: fixed;
+  font-family: HK, sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(30,60,135,1);
+  text-align: center;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5em;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  top: 1em;
+}
+h1 {
+  position: relative;
+  top: 0.5em;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: HK, sans-serif;
+  text-align: center;
+}
+body {
+  background-image: url("./static/website/medical.png");
+  background-size: 100%;
+  background-color: rgba(31,110,150,1);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.content{
+  width: 60%;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: HK, sans-serif;
+  font-weight: lighter;
+  font-size: 90%;
+  position: relative;
+  left: 20%;
+  top: 20%;
+  column-count: 2;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+}
+.navstrip{
+  font-size: 175%;
+  position: fixed;
+  color: white;
+  left: 0.5em;
+  top: 10em;
+  margin:0;
+  padding:0;
+}
+li {
+  cursor: pointer;
+}
+li:hover{
+  color: gold;
+}
+li:active{
+  color: red;
+  outline: none;
+}
+:focus{
+  outline: none;
+}
+.like{
+  visibility: hidden;
+  display: inline;
+  font-family: georgia;
+}
+.visible{
+  visibility: visible;
+}
+.icon-heart-o {
+  font-family: heart-font;
+  animation: shrink 0.5s forwards;
+  display: inline;
+}
+.icon-heart-o:hover{
+  animation: grow 0.5s forwards;
+}
+.large {
+  font-size: 200%;
+}
+@keyframes grow {
+  from { }
+  50% { font-size: 125%; }
+  65% { font-size: 120%; }
+  90% { font-size: 125%; }
+  100% { font-size: 125%; }
+}
+</style>
+<script type="text/javascript">
+/*
+  document.querySelector('.icon-heart-o').addEventListener('mouseover', likeComment);
+  document.querySelector('.icon-heart-o').addEventListener('mouseout', hideComment);
+  var commentDiv = document.querySelector('.like');
+  function likeComment() {
+    if (commentDiv.className.includes('visible')) {
+      commentDiv.className = "like";
+    } else {
+      commentDiv.className = "like visible";
+    }
+  }
+  function hideComment() {
+    if (commentDiv.className.includes('visible')) {
+      commentDiv.className = "like";
+    }
+  }
+  */
+</script>
+</body>
+</html>
